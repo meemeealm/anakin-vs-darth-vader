@@ -1,0 +1,21 @@
+[project]
+name = "anakin"
+version = "0.1.0"
+description = "dependencies for Relational and Psychological Network Analysis"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "matplotlib>=3.11.1",
+    "networkx>=3.6.1",
+    "numpy>=2.5.2",
+    "pandas>=3.0.5",
+    "pyvis>=0.3.2",
+    "scikit-learn>=1.9.0",
+    "torch>=2.14.0",
+    "torch-geometric>=2.8.0.post1",
+]
+
+[dependency-groups]
+dev = [
+    "ipykernel>=7.3.0",
+]

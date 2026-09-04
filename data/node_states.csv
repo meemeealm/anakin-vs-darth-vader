@@ -1,0 +1,8 @@
+Timestamp,Era_Step,Node_ID,State_Label,Stress_Score,Palpatine_Proximity,Mental_State
+32 BBY,t1,Anakin,0,0.1,0.0,Optimistic
+22 BBY,t5,Anakin,1,0.4,0.2,Conflicted
+19 BBY,t11,Anakin,2,0.9,0.95,Desperate/Traumatized
+0 BBY,t14,Vader,3,0.8,0.9,Numb/Cold
+4 ABY,t16,Anakin/Vader,4,0.2,0.0,At Peace
+
+
