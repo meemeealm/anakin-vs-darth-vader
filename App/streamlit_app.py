@@ -1,4 +1,6 @@
 import streamlit as st
+from pathlib import Path
+
 import torch
 import torch.nn as nn
 import pandas as pd
@@ -42,9 +44,13 @@ class TemporalAnakinGNN(nn.Module):
 
 @st.cache_resource
 def load_model_and_data():
-    edges_df = pd.read_csv("data/temporal_edges.csv")
-    node_states_df = pd.read_csv("data/node_states.csv")
-    characters_df = pd.read_csv("data/characters.csv")
+    root = Path(__file__).resolve().parent
+
+    edges_df = pd.read_csv(root/"data"/"temporal_edges.csv")
+
+    node_states_df = pd.read_csv(root/"data"/"node_states.csv")
+
+    characters_df = pd.read_csv(root /"data"/"characters.csv")
 
     model = TemporalAnakinGNN(
         num_node_features=3,
@@ -53,7 +59,7 @@ def load_model_and_data():
     )
 
     checkpoint = torch.load(
-        "model/anakin_tgnn.pth",
+        root / "model" / "anakin_tgnn.pth",
         map_location="cpu",
         weights_only=True
     )
